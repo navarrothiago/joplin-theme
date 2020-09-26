@@ -45,7 +45,7 @@
     --font-weight-light: 200;
     --font-weight-base: 400;
     --font-weight-bold: 550;
-    --font-sans: "GoogleSans Nerd Font"; /*Bahnschrift */
+    --font-sans: "GoogleSans Nerd Font"; 
     --font-mono: "RobotoMono Nerd Font";
     --Brandon: "Brandon Grotesque";
     --Galliard: "Galliard EF Roman Italic";
@@ -62,10 +62,9 @@
 }
 
 * {
-    font-family: var(--font-sans) !important;
-    font-weight: var(--font-weight-bold) !important;
-    font-size: var(--font-size) !important;
-    line-height: var(--font-line-height) !important;
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size);
+    line-height: var(--font-line-height); 
 }
 
 .fa, .far, .fas {
@@ -108,70 +107,7 @@
     border: 1px solid var(--grey) !important;
 }
 
-/* markdown */
-.ace_text-layer {
-    padding: 3%;
-}
 
-.ace_content {
-    background-color: var(--grey) !important;
-}
-
-.ace_editor div, .ace_editor span {
-    font-family: var(--font-mono) !important;
-    font-weight: var(--font-weight-base) !important;
-    color: var(--white);
-}
-
-.ace_heading {
-    color: var(--yellow) !important;
-}
-
-/*Bold*/
-.ace_string.ace_strong {
-    color: var(--green) !important;
-    font-weight: bold !important;
-}
-
-/* Italics */
-.ace_string.ace_emphasis {
-	color: var(--green) !important;
-	font-style: italic !important;
-}
-
-/* Line Breaks */
-.ace_constant.ace_language.ace_escape {
-	color: var(--yellow) !important;
-}
-
-.ace_variable {
-    color: var(--white) !important;
-}
-
-/* Lists and Checkboxes */
-.ace_list {
-    color: var(--white) !important;
-}
-
-/* Inline Codes and Codeblocks */
-.ace_support.ace_function {
-	color: var(--aqua) !important;
-}
-
-.ace_string {
-    color: var(--primary) !important;
-    
-}
-
-.ace_cursor {
-    border-left: var(--base-size-1) solid var(--orange) !important;
-}
-
-/* prevent cursor from blinking */
-/* https://discourse.joplinapp.org/t/share-your-css/1730/17 */
-.ace_cursor-layer:not(.ace_hidden-cursors) .ace_cursor {
-    opacity: 1 !important;
-}
 
 /* gui */
 .side-bar {
@@ -336,6 +272,7 @@ div.tag-list span {
     background-color: var(--grey) !important;
 }
 
+/* title bar */
 #react-root div div div:last-child div input {
     margin: 0 !important;
     margin-right: var(--base-size-18) !important;
@@ -345,7 +282,7 @@ div.tag-list span {
     font-size: var(--font-size) !important;
     font-family: var(--font-mono);
     font-weight: var(--font-weight-bold);
-    background-color: var(--grey) !important
+    background-color: var(--grey) !important;
 }
 
 
@@ -388,12 +325,13 @@ a.button {
 background-color: var(--black) !important;
 }
 
+/* search bar */
 input {
     font-family: var(--font-sans) !important;
     border-radius: var(--base-size-4) !important;
     border: 0px !important;
     color: var(--white) !important;
-    background-color: var(--grey) !important;
+    background-color: var(--light-grey) !important;
     border: var(--base-size-1) solid var(--black) !important;
     opacity: 1;
     /*outline: none;*/
@@ -459,7 +397,8 @@ input:focus {
 
 /* ==CodeMirror editor modifications - these will not work with the default ACE editor== */
 span[role="presentation"] {
-    color: black;
+    color: var(--white);
+    font-family: var(--font-sans);
    /* changes the font colour for the editor text */
 }
 .cm-variable-2, .cm-meta {
@@ -501,3 +440,13 @@ span[role="presentation"] {
     font-weight: 900;
    /* changes the font weight for horizontal rule markdown "***" */
 }
+.cm-header-1, .cm-header-2, .cm-header-3, .cm-header-4 {
+    color: var(--orange-dark) !important
+   /* changes header (#) markdown "***" */
+}
+
+/* .cm-s-material-darker.CodeMirror{
+  font-size: var(--font-size);
+  font-family: var(--font-sans);
+  line-height: var(--font-line-height); 
+} */
