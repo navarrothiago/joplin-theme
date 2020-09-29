@@ -55,6 +55,11 @@
     --icon-size: var(--font-size);
 }
 
+code{
+  font-family: "Fira Code";
+  font-size: var(--base-size-15);
+}
+
 .yellow {
     color: var(--yellow) !important;
     font-family: var(--font-title);
